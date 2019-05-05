@@ -42,11 +42,17 @@ python train_abwim.py
 
 The results should be like 
 ```
-
+05/05/2019 07:10:03 ================================= epoch: 31 ==================================
+05/05/2019 07:10:03 loss=0.010898256674408913
+05/05/2019 07:10:03 train_loss_not_null=7849.0, total_train_num=205056,
+05/05/2019 07:10:04 new best valid f1 found
+05/05/2019 07:10:04 model saved to models/New_exp_idx_abwim_on_1/model_epoch_31.h5.
+05/05/2019 07:10:04 valid, r_f1=0.9389853526045203, batch_num=38333, need
+05/05/2019 07:10:08 test, r_f1=0.9365811053423262, batch_num=38333, need
 ```
 Please refer to `./ABWIMSimpleQA/logs/New_exp_idx_abwim_on_1.log` for detailed training log.
 
-On WebQSP, run  
+On WebQSP, run 
 ```
 
 ```
