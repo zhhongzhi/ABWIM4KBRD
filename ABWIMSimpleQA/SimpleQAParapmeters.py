@@ -15,6 +15,7 @@ class RDParameters:
         # self.alias_num = 3
         self.alias_num = 1
         self.alias_q_max_len = 10
+        self.match_o_dim = 900
 
         self.emb_dim = 300
 

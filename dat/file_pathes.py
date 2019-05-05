@@ -12,7 +12,7 @@ dp = os.path.abspath(os.path.dirname(__file__)) + '/'
 common_used_static_log_f = dp + 'common_used_static.log'
 
 # ########################################### SimpleQA #############################################
-simple_qa_dp = u'/mydata/wp/SimpleQAMine/relations/'
+simple_qa_dp = dp + u'KBQA_RE_data/sq_relations/'
 simple_qa_rel_f = simple_qa_dp + u'relation.2M.list'
 
 simple_qa_vocab_f = dp + 'SimpleQA_vocab.txt'

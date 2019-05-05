@@ -99,9 +99,9 @@ class NerTrain:
                 if rel_acc > self.best_valid_f1 and valid_or_test == 'valid':
                     self.loger.info('new best valid f1 found')
                     self.best_valid_f1 = rel_acc
-                    # if rel_acc > 0.939:
-                    #     fnm = self.opt.model_dir + 'model_epoch_{}.h5.'.format(epoch)
-                    #     self.model.save(fnm, epoch)
+                    if rel_acc > 0.938:
+                        fnm = self.opt.model_dir + 'model_epoch_{}.h5.'.format(epoch)
+                        self.model.save(fnm, epoch)
                 self.loger.info(u'{}, r_f1={}, batch_num={}, need'.format(valid_or_test, rel_acc, batch_num))
 
     def predict_all_batches(self, batches, which):
@@ -175,19 +175,8 @@ def mean(numbers):
 
 
 if __name__ == '__main__':
-    # opt = JointWebqaParameters(dev, train_idx='deep_joint_02') # relation with bi-directional compare
-    # opt = JointWebqaParameters(dev, train_idx='solely_rd')
-    # opt = JointWebqaParameters(dev, train_idx='with_select_no_wh')
-    # opt = JointWebqaParameters(dev, train_idx='with_select_no_wh+adv')
-    # opt = JointWebqaParameters(dev, train_idx='with_select_no_wh+small_kept_rate')
-    # opt = JointWebqaParameters(dev, train_idx='with_select_with_wh_large_kept_rate')
-    # opt = JointWebqaParameters(dev, train_idx='with_select_with_wh_0.2_kept_rate')
-    opt = JointWebqaParameters(dev=dev, train_idx='find_back_small')
+    opt = JointWebqaParameters(dev=dev, train_idx='abwim')
 
-    # opt.resume_dsrc_flag = True
-    opt.trained_model = '/home/hongzhi/wp/KBQA_nlpcc_2018/ABWIMSimpleQA/models/New_exp_idx_find_on_1/model_epoch_63.h5.'
-    opt.merge_fts_dim = 250
-    # opt.q_hidden = 100
     t = NerTrain(opt=opt)
     # t.valid_it(-1,0)
     t.train()
