@@ -11,7 +11,10 @@ import os
 import math
 import time
 
-sys.path.append('/home/hongzhi/wp/KBQA_nlpcc_2018/')
+dp = os.path.abspath(os.path.dirname(__file__))
+dp = u'/'.join(os.path.split(dp)[:-1])
+sys.path.append(dp)
+
 dev = 1
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "{}".format(dev)
