@@ -20,12 +20,12 @@ git clone https://github.com/Gorov/KBQA_RE_data.git
 ``` 
 
 ## Preparing the vocab and word vectors
-The word vectors extracted for these two data sets are uploaded. 
+The word vectors extracted for these data sets are uploaded. 
 ```
 ./dat/SimpleQA_vocab.txt
 ./dat/WebQA_vocab.txt
 ```
-The scripts needed for reproduction is also available. 
+The scripts needed for reproduction are also available. 
 Firstly, download and unzip [glove.6B.300d.txt](http://nlp.stanford.edu/data/wordvecs/glove.6B.zip) and unzip it into  `./dat`. 
 
 Secondly, run 
